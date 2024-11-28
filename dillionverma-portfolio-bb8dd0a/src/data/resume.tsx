@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Developer | Engineer | Writer",
   summary:
-    "Passionate Engineer who loves to work on things related to web and games. Diving deep in [Golang](https://go.dev/), [WebRTC](https://webrtc.org/) and [Solidity](https://soliditylang.org/) these days. Apart from developing and debugging, I am highly interested in volleyball, emulation, mechanical keyboards and rubik's cube. Currently working as a freelance engineer and a building frontend at [Keyshade](https://www.keyshade.xyz/). You can find me pretty much active on [Github](https://github.com/poswalsameer), [LinkedIn](https://www.linkedin.com/in/sameerposwal/) and [Twitter](https://twitter.com/sameerposwal03). Feel free to check out my [Resume](https://docs.google.com/document/d/1X5eMOd4Jn4zolTgN-wwA2KxnnPu25FRe/edit?usp=sharing&ouid=105591030184095501081&rtpof=true&sd=true).",
+    "Passionate Engineer who loves to work on things related to web and games. Diving deep in [Golang](https://go.dev/), [WebRTC](https://webrtc.org/) and [Solidity](https://soliditylang.org/) these days. Apart from developing and debugging, I am highly interested in volleyball, emulation, mechanical keyboards and rubik's cube. Currently working as a freelance engineer and building frontend at [Keyshade](https://www.keyshade.xyz/). You can find me pretty much active on [Github](https://github.com/poswalsameer), [LinkedIn](https://www.linkedin.com/in/sameerposwal/) and [Twitter](https://twitter.com/sameerposwal03). Feel free to check out my [Resume](https://docs.google.com/document/d/1X5eMOd4Jn4zolTgN-wwA2KxnnPu25FRe/edit?usp=sharing&ouid=105591030184095501081&rtpof=true&sd=true).",
   avatarUrl: "/profile.jpg",
   skills: [
     "React.js",
