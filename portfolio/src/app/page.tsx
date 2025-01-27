@@ -1,3 +1,4 @@
+import PixelGrid from "@/components/companygrid/grid";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -50,6 +51,13 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+
+      <section className="h-full w-full flex justify-center items-center" id="companygrid">
+        {/* <div className="w-full h-full"> */}
+          <PixelGrid />
+        {/* </div> */}
+      </section>
+    
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>

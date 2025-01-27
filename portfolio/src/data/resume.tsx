@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Developer | Engineer | Writer",
   summary:
-    "Passionate Engineer who loves to work on things related to web and games. Diving deep in [Golang](https://go.dev/), [WebRTC](https://webrtc.org/) and [Solidity](https://soliditylang.org/) these days. Apart from developing and debugging, I am highly interested in volleyball, emulation, mechanical keyboards and rubik's cube. Currently working as a freelance engineer and building frontend at [Keyshade](https://www.keyshade.xyz/). You can find me pretty much active on [Github](https://github.com/poswalsameer), [LinkedIn](https://www.linkedin.com/in/sameerposwal/) and [Twitter](https://twitter.com/sameerposwal03). Feel free to check out my [Resume](https://docs.google.com/document/d/1X5eMOd4Jn4zolTgN-wwA2KxnnPu25FRe/edit?usp=sharing&ouid=105591030184095501081&rtpof=true&sd=true).",
+    "Passionate Engineer who loves to work on things related to web and games. Diving deep in [Golang](https://go.dev/), [WebRTC](https://webrtc.org/) and [Solidity](https://soliditylang.org/) these days. Apart from developing and debugging, I am highly interested in volleyball, emulation, mechanical keyboards and rubik's cube. Currently working as a software engineer at [Referrush](https://www.referrush.com), and previously worked as a frontend engineer at [Keyshade](https://www.keyshade.xyz/). You can find me pretty much active on [Github](https://github.com/poswalsameer), [LinkedIn](https://www.linkedin.com/in/sameerposwal/) and [Twitter](https://twitter.com/sameerposwal03). Feel free to check out my [Resume](https://docs.google.com/document/d/1X5eMOd4Jn4zolTgN-wwA2KxnnPu25FRe/edit?usp=sharing&ouid=105591030184095501081&rtpof=true&sd=true).",
   avatarUrl: "/profile.jpg",
   skills: [
     "React.js",
@@ -86,6 +86,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Referrush",
+      href: "https://www.referrush.com/",
+      badges: [],
+      location: "Remote",
+      title: "Software Engineer",
+      logoUrl: "/referrush.png",
+      start: "Jan 2025",
+      end: "Present",
+      description:
+        "Currently working as a software engineer at Referrush building the product that includes their web application and shopify apps and extensions that will help thousands of brands in increasing their sales through direct customer referrals.",
+    },
+    {
       company: "Keyshade",
       href: "https://www.keyshade.xyz/",
       badges: [],
@@ -93,7 +105,7 @@ export const DATA = {
       title: "Frontend Engineer",
       logoUrl: "/keyshade.png",
       start: "November 2024",
-      end: "Present",
+      end: "Jan 2025",
       description:
         "Currently working as a frontend engineer at Keyshade developing frontends for their Platform and Web application. Collaborating with the backend team to ship code with minimum production time errors and building with full efficiency. Being part of an open-source organization, also taking parts in PR reviews on Github.",
     },
