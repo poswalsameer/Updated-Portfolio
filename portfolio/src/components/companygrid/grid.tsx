@@ -8,12 +8,14 @@ export default function PixelGrid() {
 
   // Calculate the number of columns based on screen width
   const calculateCols = () => {
-    const screenWidth = window.innerWidth;
-    // Adjust the number of columns based on screen width
-    if( screenWidth < 375 ) return 10;
-    if (screenWidth < 640) return 16;
-    // if (screenWidth < 1024) return 24;
-    return 32;
+    if (typeof window !== "undefined") {
+      const screenWidth = window.innerWidth;
+      // Adjust the number of columns based on screen width
+      if (screenWidth < 375) return 10;
+      if (screenWidth < 640) return 16;
+      return 32;
+    }
+    return 32; // Default value if window is not defined
   };
 
   const [cols, setCols] = useState(calculateCols());
@@ -23,10 +25,12 @@ export default function PixelGrid() {
       setCols(calculateCols());
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   useEffect(() => {
@@ -62,28 +66,26 @@ export default function PixelGrid() {
   }, [cols]);
 
   return (
-    // <div className="flex justify-center items-center min-h-screen bg-gray-900 p-4">
-      <div
-        className="grid bg-black max-w-[1280px] aspect-[4/1]"
-        style={{
-          display: "grid",
-          gridTemplateColumns: `repeat(${cols}, minmax(0, 5vw))`, // Adjusted to decrease size with screen width
-          gap: "4px",
-        }}
-      >
-        {grid.map((row, i) =>
-          row.map((color, j) => (
-            <div
-              key={`${i}-${j}`}
-              className="aspect-square"
-              style={{
-                borderRadius: window.innerWidth < 640 ? "1px" : window.innerWidth < 1024 ? "2px" : "1.8px",
-                backgroundColor: color,
-              }}
-            />
-          )),
-        )}
-      </div>
-    // </div>
+    <div
+      className="grid bg-black max-w-[1280px] aspect-[4/1]"
+      style={{
+        display: "grid",
+        gridTemplateColumns: `repeat(${cols}, minmax(0, 5vw))`, // Adjusted to decrease size with screen width
+        gap: "4px",
+      }}
+    >
+      {grid.map((row, i) =>
+        row.map((color, j) => (
+          <div
+            key={`${i}-${j}`}
+            className="aspect-square"
+            style={{
+              borderRadius: typeof window !== "undefined" ? (window.innerWidth < 640 ? "1px" : window.innerWidth < 1024 ? "2px" : "1.8px") : "1px",
+              backgroundColor: color,
+            }}
+          />
+        )),
+      )}
+    </div>
   )
 }
