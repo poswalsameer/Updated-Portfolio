@@ -2,90 +2,103 @@
 
 import { useState, useEffect } from "react"
 
+// white - #ced4da
+// green - #06b84d
+
 export default function PixelGrid() {
-  const rows = 8
-  const [grid, setGrid] = useState<string[][]>([])
+  const grid = Array.from({ length: 8 }, (_, rowIndex) => (
+    Array.from({ length: 32 }, (_, colIndex) => ({
+      id: `${rowIndex}-${colIndex}`,
+      row: rowIndex,
+      col: colIndex
+    }))
+  ));
 
-  // Calculate the number of columns based on screen width
-  const calculateCols = () => {
-    if (typeof window !== "undefined") {
-      const screenWidth = window.innerWidth;
-      // Adjust the number of columns based on screen width
-      if (screenWidth < 375) return 10;
-      if (screenWidth < 640) return 16;
-      return 32;
-    }
-    return 32; // Default value if window is not defined
-  };
+  const createGrid = (rows: number, cols: number) =>
+    Array.from({ length: rows }, (_, rowIndex) =>
+      Array.from({ length: cols }, (_, colIndex) => ({
+        id: `${rowIndex}-${colIndex}`,
+        row: rowIndex,
+        col: colIndex
+      }))
+    );
 
-  const [cols, setCols] = useState(calculateCols());
+  const greenCells = new Set([
+    '1,14', '1,15', '1,16', '1,17', '1,18',
+    '2,14', '2,18',
+    '3,14', '3,15', '3,16', '3,17', '3,18',
+    '4,14', '4,15', '4,16',
+    '5,14', '5,17',
+    '6,14', '6,18'
+  ]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setCols(calculateCols());
-    };
+  const greenCellsSmall = new Set([
+    '1,5', '1,6', '1,7', '1,8', '1,9',
+    '2,5', '2,9',
+    '3,5','3,6', '3,7', '3,8', '3,9',
+    '4,5','4,6', '4,7',
+    '5,5', '5,8',
+    '6,5', '6,9',
 
-    if (typeof window !== "undefined") {
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    // Initialize empty grid
-    const newGrid = Array(rows)
-      .fill(null)
-      .map(() => Array(cols).fill("#ced4da"))
-
-    // Define the wider R pattern (6x5)
-    const rPattern = [
-      [1, 1, 1, 1, 1],
-      [1, 0, 0, 0, 1],
-      [1, 1, 1, 1, 1],
-      [1, 1, 1, 0, 0],
-      [1, 0, 0, 1, 0],
-      [1, 0, 0, 0, 1],
-    ]
-
-    // Calculate center position (start from second row)
-    const startRow = 1
-    const startCol = Math.floor(cols / 2 - Math.floor(rPattern[0].length / 2))
-
-    // Place the R pattern
-    rPattern.forEach((row, i) => {
-      row.forEach((cell, j) => {
-        if (cell === 1 && startRow + i < rows - 1 && startCol + j < cols) {
-          newGrid[startRow + i][startCol + j] = "#06b84d"
-        }
-      })
-    })
-
-    setGrid(newGrid)
-  }, [cols]);
+  ]);
 
   return (
-    <div
-      className="grid bg-black max-w-[1280px] aspect-[4/1]"
-      style={{
-        display: "grid",
-        gridTemplateColumns: `repeat(${cols}, minmax(0, 5vw))`, // Adjusted to decrease size with screen width
-        gap: "4px",
-      }}
-    >
-      {grid.map((row, i) =>
-        row.map((color, j) => (
-          <div
-            key={`${i}-${j}`}
-            className="aspect-square"
-            style={{
-              borderRadius: typeof window !== "undefined" ? (window.innerWidth < 640 ? "1px" : window.innerWidth < 1024 ? "2px" : "1.8px") : "1px",
-              backgroundColor: color,
-            }}
-          />
-        )),
-      )}
+    <div className=" ">
+      <div className="block sm:hidden w-full">
+        <div className="bg-black rounded-lg shadow-lg p-1">
+          <div className="w-full">
+            <div className="grid gap-[4px]" style={{ gridTemplateRows: 'repeat(8, minmax(0, 1fr))' }}>
+              {createGrid(8, 16).map((row, rowIndex) => (
+                <div
+                  key={rowIndex}
+                  className="grid gap-[4px]"
+                  style={{ gridTemplateColumns: 'repeat(16, minmax(0, 1fr))' }}
+                >
+                  {row.map((cell) => {
+                    const cellCoord = `${cell.row},${cell.col}`;
+                    const isGreen = greenCellsSmall.has(cellCoord);
+
+                    return (
+                      <div
+                        key={cell.id}
+                        className={`aspect-square ${isGreen ? 'bg-[#06b84d]' : 'bg-[#ced4da]'} transition-colors duration-200 rounded-[2px] flex items-center justify-center`}
+                      />
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden sm:block bg-transparent">
+        <div className="max-w-[1600px] rounded-md shadow-lg">
+          <div className="grid gap-1" style={{ gridTemplateRows: 'repeat(8, minmax(0, 1fr))' }}>
+            {createGrid(8, 32).map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="grid gap-[10px] sm:gap-[18px] md:gap-5 lg:gap-6"
+                style={{ gridTemplateColumns: 'repeat(32, minmax(0, 1fr))' }}
+              >
+                {row.map((cell) => {
+                  const cellCoord = `${cell.row},${cell.col}`;
+                  const isGreen = greenCells.has(cellCoord);
+
+                  return (
+                    <div
+                      key={cell.id}
+                      className={`h-[7px] w-[7px] sm:h-[14px] sm:w-[14px] md:h-4 md:w-4 lg:h-5 lg:w-5 ${isGreen ? 'bg-[#06b84d]' : 'bg-[#ced4da]'} transition-colors duration-200 rounded-[1px] sm:rounded-[2px] md:rounded-[3px] lg:rounded-[3px] flex items-center justify-center text-xs `}
+                    >
+                    </div>
+                  )
+                })}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }

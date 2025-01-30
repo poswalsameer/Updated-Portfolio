@@ -52,7 +52,7 @@ export default function Page() {
         </BlurFade>
       </section>
 
-      <section className="h-full w-full flex justify-center items-center" id="companygrid">
+      <section className="h-full w-full " id="companygrid">
         {/* <div className="w-full h-full"> */}
           <PixelGrid />
         {/* </div> */}
