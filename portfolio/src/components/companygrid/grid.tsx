@@ -24,12 +24,12 @@ export default function PixelGrid() {
     );
 
   const greenCells = new Set([
-    '1,14', '1,15', '1,16', '1,17', '1,18',
-    '2,14', '2,18',
-    '3,14', '3,15', '3,16', '3,17', '3,18',
-    '4,14', '4,15', '4,16',
-    '5,14', '5,17',
-    '6,14', '6,18'
+    '1,13', '1,14', '1,15', '1,16', '1,17',
+    '2,13', '2,17',
+    '3,13', '3,14', '3,15', '3,16', '3,17',
+    '4,13', '4,14', '4,15',
+    '5,13', '5,16',
+    '6,13', '6,17'
   ]);
 
   const greenCellsSmall = new Set([
@@ -75,11 +75,11 @@ export default function PixelGrid() {
       <div className="hidden sm:block bg-transparent">
         <div className="max-w-[1600px] rounded-md shadow-lg">
           <div className="grid gap-1" style={{ gridTemplateRows: 'repeat(8, minmax(0, 1fr))' }}>
-            {createGrid(8, 32).map((row, rowIndex) => (
+            {createGrid(8, 31).map((row, rowIndex) => (
               <div
                 key={rowIndex}
                 className="grid gap-[10px] sm:gap-[18px] md:gap-5 lg:gap-6"
-                style={{ gridTemplateColumns: 'repeat(32, minmax(0, 1fr))' }}
+                style={{ gridTemplateColumns: 'repeat(31, minmax(0, 1fr))' }}
               >
                 {row.map((cell) => {
                   const cellCoord = `${cell.row},${cell.col}`;
@@ -88,7 +88,7 @@ export default function PixelGrid() {
                   return (
                     <div
                       key={cell.id}
-                      className={`h-[7px] w-[7px] sm:h-[14px] sm:w-[14px] md:h-4 md:w-4 lg:h-5 lg:w-5 ${isGreen ? 'bg-[#06b84d]' : 'bg-[#ced4da]'} transition-colors duration-200 rounded-[1px] sm:rounded-[2px] md:rounded-[3px] lg:rounded-[3px] flex items-center justify-center text-xs `}
+                      className={`h-[7px] w-[7px] sm:h-[14px] sm:w-[14px] md:h-4 md:w-4 lg:h-5 lg:w-5 ${isGreen ? 'bg-green-500' : 'bg-zinc-700/50 border border-zinc-700/30'} transition-colors duration-200 rounded-[1px] sm:rounded-[2px] md:rounded-[3px] lg:rounded-[3px] flex items-center justify-center text-xs `}
                     >
                     </div>
                   )
