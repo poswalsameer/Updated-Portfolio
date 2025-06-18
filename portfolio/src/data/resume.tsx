@@ -90,7 +90,7 @@ export const DATA = {
       href: "https://www.referrush.com/",
       badges: [],
       location: "Remote",
-      title: "Software Engineer",
+      title: "Founding Engineer",
       logoUrl: "/referrush.png",
       start: "Jan 2025",
       end: "Present",
