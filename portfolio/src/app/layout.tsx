@@ -2,6 +2,12 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { geistSans } from "@/fonts";
 import { Analytics } from "@vercel/analytics/react"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sameer Poswal",
+  description: "Portfolio of Sameer Poswal",
+};
 
 export default function RootLayout({
   children,
