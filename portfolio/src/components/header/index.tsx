@@ -35,7 +35,7 @@ export default function Header() {
 
         <BlurFadeText
           className="w-full text-sm md:text-base text-zinc-300"
-          delay={BLUR_FADE_DELAY}
+          delay={BLUR_FADE_DELAY * 9}
           text={description}
         />
       </div>
