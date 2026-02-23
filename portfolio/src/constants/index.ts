@@ -42,6 +42,13 @@ export const projects = [
     technologies: ['Next.js', 'Typescript', 'Tailwind', 'ShadCN'],
   },
   {
+    title: 'Qura',
+    description: 'Generate beautiful and custom QR codes in seconds, that is appealing to the users.',
+    github: "https://github.com/poswalsameer/qura",
+    link: "https://qura.sameerposwal.xyz/",
+    technologies: ['Next.js', 'Typescript', 'Tailwind', 'NPM', 'SVG'],
+  },
+  {
     title: 'Shortfolio',
     description: 'Shortfolio will help you in preparing your portfolio page in less than 2 minutes.',
     github: "https://github.com/poswalsameer/shortfolio",
@@ -153,4 +160,5 @@ export const skills = [
 ]
 
 export const description = "Passionate engineer from India. Loves to work with web and games. Enthusiastic about volleyball, emulation, mechanical keyboards, chess and rubik's cubes."
+
 
