@@ -21,6 +21,27 @@ export const experiences = [
 
 export const projects = [
   {
+    title: 'Resumate',
+    description: 'Analyze your resume in no time with smart and instant feedback about clarity, ATS, and job readiness.',
+    github: "https://github.com/poswalsameer/resumate",
+    link: "https://resumate.sameerposwal.xyz/",
+    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Jotai', 'Express', 'LLMs', 'GenAI'],
+  },
+  {
+    title: 'JS Dock',
+    description: 'Browser-based Javascript code execution environment that can run your Javascript code efficiently with a beautiful UX.',
+    github: "https://github.com/poswalsameer/jsdock",
+    link: "https://jsdock.sameerposwal.xyz/",
+    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Jotai', 'Monaco Editor', 'Web Worker'],
+  },
+  {
+    title: 'Typr',
+    description: 'Want to 2x your productivity as a developer. There\'s no hack, learn typing with your 10 fingers and start working with double productivity.',
+    github: "https://github.com/poswalsameer/typr",
+    link: "https://typr.sameerposwal.xyz/",
+    technologies: ['Next.js', 'Typescript', 'Tailwind', 'ShadCN'],
+  },
+  {
     title: 'Shortfolio',
     description: 'Shortfolio will help you in preparing your portfolio page in less than 2 minutes.',
     github: "https://github.com/poswalsameer/shortfolio",
@@ -47,13 +68,6 @@ export const projects = [
     github: "https://github.com/poswalsameer/trackr",
     link: "https://trackrlife.vercel.app/",
     technologies: ['Next.js', 'Typescript', 'Tailwind', "Next Auth", "React Drag and Drop"],
-  },
-  {
-    title: 'TypeMaster',
-    description: 'Want to 2x your productivity as a developer. There\'s no hack, learn typing with your 10 fingers and start working with double productivity.',
-    github: "https://github.com/poswalsameer/TypeMaster",
-    link: "https://typemaster-typingtest.netlify.app/",
-    technologies: ['React', 'Javascript', 'Tailwind'],
   },
 ];
 
@@ -139,3 +153,4 @@ export const skills = [
 ]
 
 export const description = "Passionate engineer from India. Loves to work with web and games. Enthusiastic about volleyball, emulation, mechanical keyboards, chess and rubik's cubes."
+
