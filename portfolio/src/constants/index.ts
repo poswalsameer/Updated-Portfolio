@@ -138,27 +138,30 @@ export const skills = [
   "Typescript",
   "Node.js",
   "Express.js",
-  "Appwrite",
-  "Socket.io",
-  "Redux",
   "Tailwind",
   "ShadCN",
   "NPM",
+  "Jotai",
+  "Zustand",
   "Python",
-  "Go",
+  "Golang",
   "Postgres",
   "MongoDB",
-  "Docker",
+  "Appwrite",
   "Github",
   "C++",
-  "C#",
-  "Unity",
   "Postman",
   "Vercel",
+  "Websockets",
+  "Generative AI",
+  "C#",
+  "Unity",
+  "Docker",
   "Data Structures",
   "Algorithms"
 ]
 
 export const description = "Passionate engineer from India. Loves to work with web and games. Enthusiastic about volleyball, emulation, mechanical keyboards, chess and rubik's cubes."
+
 
 
