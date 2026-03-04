@@ -1,6 +1,6 @@
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { geistSans } from "@/fonts";
+import { jetbrainsMono, manrope, outfit } from "@/fonts";
 import { Analytics } from "@vercel/analytics/react"
 import { Metadata } from "next";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-zinc-900 border-l border-r border-zinc-900 sm:border-zinc-700 max-w-2xl mx-auto",
-          geistSans.className
+          manrope.className
         )}
       >
 
