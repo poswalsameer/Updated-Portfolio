@@ -1,25 +1,25 @@
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { jetbrainsMono, manrope, outfit } from "@/fonts";
+import "./globals.css"
+import { cn } from "@/lib/utils"
+import { dmSans } from "@/fonts"
 import { Analytics } from "@vercel/analytics/react"
-import { Metadata } from "next";
+import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Sameer Poswal",
   description: "Portfolio of Sameer Poswal",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-zinc-900 border-l border-r border-zinc-900 sm:border-zinc-700 max-w-2xl mx-auto",
-          manrope.className
+          dmSans.className
         )}
       >
 
@@ -27,5 +27,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }
