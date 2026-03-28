@@ -1,10 +1,9 @@
 "use client"
 
-import Header from "@/components/header";
-import Education from "@/components/education";
-import PortfolioBody from "@/components/portfolio-body";
-import Skills from "@/components/skills";
-import Footer from "@/components/footer";
+import Header from "@/components/header"
+import Skills from "@/components/skills"
+import Education from "@/components/education"
+import PortfolioBody from "@/components/portfolio-body"
 
 export default function Page() {
   return (
@@ -15,7 +14,6 @@ export default function Page() {
         <Skills />
         <Education />
       </div>
-      {/* <Footer /> */}
     </main>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import { experiences } from "@/constants";
+import { experiences } from "@/constants"
 
 export default function WorkExperience() {
   return (
     <div className="w-full flex flex-col gap-y-8">
       {experiences.map((exp) => (
-        <div className="w-full flex flex-col gap-y-3 sm:gap-y-2">
+        <div key={exp.company} className="w-full flex flex-col gap-y-3 sm:gap-y-2">
           <div className="flex flex-col gap-y-1 sm:flex-row items-start justify-between gap-4">
             <h3 className="text-base font-medium text-white">
               {exp.title} <span className="text-zinc-400">at <a href={exp.link} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{exp.company}</a></span>
