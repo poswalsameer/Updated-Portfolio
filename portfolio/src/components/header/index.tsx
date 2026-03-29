@@ -1,8 +1,5 @@
 import BlurFade from "../magicui/blur-fade"
-import GithubSvg from "../svgs/github"
-import LinkedinSvg from "../svgs/linkedin"
-import MailSvg from "../svgs/mail"
-import TwitterSvg from "../svgs/twitter"
+import { GithubSvg, LinkedinSvg, MailSvg, TwitterSvg } from "../svgs"
 import BlurFadeText from "../magicui/blur-fade-text"
 import { blurFadeDelay, description } from "@/constants"
 

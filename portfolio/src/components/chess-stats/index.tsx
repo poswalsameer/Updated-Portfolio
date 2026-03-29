@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 // @ts-expect-error -- No types found
 import ChessWebAPI from 'chess-web-api'
-import BulletChess from "../svgs/bullet-chess"
-import BlitzChess from "../svgs/blitz-chess"
-import RapidChess from "../svgs/rapid-chess"
+import { BulletChess, BlitzChess, RapidChess } from "../svgs"
 import { Skeleton } from "../ui/skeleton"
 
 var chessAPI = new ChessWebAPI()
@@ -69,11 +67,11 @@ export default function ChessStats() {
             }`}
         >
           <div className="flex-shrink-0 fill-zinc-300">
-            <card.Icon className="w-6 h-6 sm:w-10 sm:h-10" />
+            <card.Icon className="w-7 h-7 sm:w-10 sm:h-10" />
           </div>
           <div className="flex flex-col gap-0 sm:gap-y-1">
-            <span className="text-[10px] sm:text-sm font-medium text-zinc-400">{card.name}</span>
-            <span className="text-sm sm:text-xl font-bold text-white">
+            <span className="text-sm sm:text-sm font-medium text-zinc-400">{card.name}</span>
+            <span className="text-base sm:text-xl font-bold text-white">
               {isLoading ? "..." : card.rating || "N/A"}
             </span>
           </div>
