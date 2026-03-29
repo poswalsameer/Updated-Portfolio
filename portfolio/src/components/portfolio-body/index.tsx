@@ -33,7 +33,10 @@ export default function PortfolioBody() {
                   <TooltipTrigger asChild>
                     <TabsTrigger
                       value={t.id}
-                      className="flex items-center justify-center h-8 px-3 data-[state=active]:text-white text-zinc-400 data-[state=active]:bg-zinc-900 data-[state=active]:underline data-[state=active]:underline-offset-2"
+                      className={`flex items-center justify-center h-8 px-3 rounded-md transition-all ${tab === t.id
+                          ? "text-white bg-zinc-900 underline underline-offset-2"
+                          : "text-zinc-400 hover:text-zinc-200"
+                        }`}
                       style={{ WebkitTapHighlightColor: "transparent" }}
                     >
                       <Icon />
