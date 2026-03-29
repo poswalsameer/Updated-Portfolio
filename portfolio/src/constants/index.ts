@@ -1,4 +1,4 @@
-export const blurFadeDelay = 0.04;
+export const blurFadeDelay = 0.04
 
 export const experiences = [
   {
@@ -17,7 +17,7 @@ export const experiences = [
     link: "https://www.keyshade.io",
     technologies: ['React', 'Next.js', 'Typescript', 'Tailwind'],
   },
-];
+]
 
 export const projects = [
   {
@@ -76,7 +76,7 @@ export const projects = [
     link: "https://trackrlife.vercel.app/",
     technologies: ['Next.js', 'Typescript', 'Tailwind', "Next Auth", "React Drag and Drop"],
   },
-];
+]
 
 export const openSource = [
   {
@@ -121,7 +121,7 @@ export const openSource = [
     link: "https://github.com/Bot-Rakshit/bm_frontend/pull/145",
     technologies: ['React', 'Javascript', 'Tailwind'],
   },
-];
+]
 
 export const education = [
   {
@@ -154,8 +154,8 @@ export const skills = [
   "Vercel",
   "Websockets",
   "Generative AI",
-  "C#",
-  "Unity",
+  // "C#",
+  // "Unity",
   "Docker",
   "Data Structures",
   "Algorithms"
