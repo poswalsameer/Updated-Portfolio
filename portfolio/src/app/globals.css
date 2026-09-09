@@ -136,10 +136,126 @@
   color: gray;
 }
  
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
+ code[data-line-numbers-max-digits="2"] > [data-line]::before {
   width: 2rem;
-}
+ }
  
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
+ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
+
+ /* Light mode overrides for white background selection */
+ html.light body {
+   color: #000 !important;
+ }
+
+ html.light .border-zinc-700 {
+   border-color: #e4e4e7 !important; /* zinc-200 */
+ }
+
+ html.light .border-zinc-900 {
+   border-color: #e4e4e7 !important;
+ }
+
+ html.light .sm\:border-zinc-700 {
+   border-color: #e4e4e7 !important;
+ }
+
+ html.light .text-white {
+   color: #000 !important;
+ }
+
+ html.light .text-zinc-300 {
+   color: #3f3f46 !important; /* zinc-700 */
+ }
+
+ html.light .text-zinc-400 {
+   color: #52525b !important; /* zinc-600 */
+ }
+
+ html.light .text-zinc-100 {
+   color: #18181b !important;
+ }
+
+ html.light .bg-zinc-900 {
+   background-color: #ffffff !important;
+   color: #000 !important;
+ }
+
+ html.light .bg-zinc-800 {
+   background-color: #f4f4f5 !important;
+ }
+
+ html.light .bg-zinc-400\/15 {
+   background-color: rgba(0, 0, 0, 0.06) !important;
+ }
+
+ html.light .hover\:bg-zinc-400\/20:hover {
+   background-color: rgba(0, 0, 0, 0.1) !important;
+ }
+
+ html.light .hover\:bg-zinc-800:hover {
+   background-color: #e4e4e7 !important;
+ }
+
+ html.light .hover\:text-zinc-200:hover {
+   color: #27272a !important;
+ }
+
+ html.light .hover\:bg-zinc-700:hover {
+   background-color: #e4e4e7 !important;
+ }
+
+ html.light .text-zinc-500 {
+   color: #71717a !important;
+ }
+
+ /* tabs active state in light mode */
+ html.light .bg-zinc-900.underline {
+   background-color: #f4f4f5 !important;
+   color: #000 !important;
+ }
+
+  /* tooltip */
+  html.light .bg-zinc-900.text-zinc-100 {
+    background-color: #ffffff !important;
+    color: #000 !important;
+    border-color: #e4e4e7 !important;
+  }
+
+  html.light .border-zinc-800 {
+    border-color: #e4e4e7 !important;
+  }
+
+  html.light .bg-zinc-900.border-zinc-800 {
+    background-color: #ffffff !important;
+    border-color: #e4e4e7 !important;
+  }
+
+  /* Skills badges - remove harsh shadow in white theme */
+  html.light .shadow,
+  html.light .shadow-sm,
+  html.light .shadow-md {
+    box-shadow: none !important;
+  }
+
+  html.light #skills .bg-zinc-400\/15 {
+    background-color: #f4f4f5 !important;
+    border-color: #e4e4e7 !important;
+    box-shadow: none !important;
+  }
+
+  html.light #skills [class*="shadow"] {
+    box-shadow: none !important;
+  }
+
+  html.light .skeleton,
+  html.light .bg-zinc-800 {
+    background-color: #f4f4f5 !important;
+  }
+
+  /* Gallery images - softer border in white theme */
+  html.light .group.border-zinc-800 {
+    border-color: #e4e4e7 !important;
+    background-color: #fafafa !important;
+  }

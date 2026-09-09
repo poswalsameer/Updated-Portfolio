@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import { schibstedGrotesk } from "@/fonts"
 import { Analytics } from "@vercel/analytics/react"
 import { Metadata } from "next"
+import { BackgroundProvider } from "@/context/background-context"
 
 export const metadata: Metadata = {
   title: "Sameer Poswal",
@@ -23,8 +24,10 @@ export default function RootLayout({
         )}
       >
 
-        <Analytics />
-        {children}
+        <BackgroundProvider>
+          <Analytics />
+          {children}
+        </BackgroundProvider>
       </body>
     </html>
   )

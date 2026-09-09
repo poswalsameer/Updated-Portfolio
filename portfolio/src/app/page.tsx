@@ -4,6 +4,7 @@ import Header from "@/components/header"
 import Skills from "@/components/skills"
 import Education from "@/components/education"
 import PortfolioBody from "@/components/portfolio-body"
+import { SettingsDesktop } from "@/components/settings"
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
         <Skills />
         <Education />
       </div>
+      <SettingsDesktop />
     </main>
   )
 }
