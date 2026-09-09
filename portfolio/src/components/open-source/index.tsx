@@ -19,15 +19,6 @@ export default function OpenSource() {
           </div>
 
           <p className="text-sm text-zinc-300">{os.description}</p>
-
-          <div className="flex flex-wrap gap-1 text-xs text-zinc-400">
-            {os.technologies.map((tech, index) => (
-              <span key={tech}>
-                {tech}
-                {index < os.technologies.length - 1 && <span className="mx-1">|</span>}
-              </span>
-            ))}
-          </div>
         </div>
       ))}
     </div>

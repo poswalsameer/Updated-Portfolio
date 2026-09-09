@@ -12,16 +12,19 @@ export default function WorkExperience() {
             <time className="text-xs sm:text-sm text-zinc-400 whitespace-nowrap">{exp.dateRange}</time>
           </div>
 
-          <p className="text-sm text-zinc-300">{exp.description}</p>
+          {(exp as { description?: string }).description && (
+            <p className="text-sm text-zinc-300">{(exp as { description?: string }).description}</p>
+          )}
 
-          <div className="flex flex-wrap gap-1 text-xs text-zinc-400">
-            {exp.technologies.map((tech, index) => (
-              <span key={tech}>
-                {tech}
-                {index < exp.technologies.length - 1 && <span className="mx-1">|</span>}
-              </span>
-            ))}
-          </div>
+          {(exp as { points?: string[] }).points && (
+            <ul className="list-disc list-outside ml-4 flex flex-col gap-y-1.5 text-sm text-zinc-300 marker:text-zinc-500">
+              {((exp as { points?: string[] }).points as string[]).map((point: string) => (
+                <li key={point} className="pl-1 leading-relaxed">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       ))}
     </div>

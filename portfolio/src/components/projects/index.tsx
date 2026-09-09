@@ -23,9 +23,21 @@ export default function Projects() {
             </div>
           </div>
 
-          <p className="text-sm text-zinc-300">{project.description}</p>
+          {(project as { description?: string }).description && (
+            <p className="text-sm text-zinc-300">{(project as { description?: string }).description}</p>
+          )}
 
-          <div className="flex flex-wrap gap-1 text-xs text-zinc-400">
+          {(project as { points?: string[] }).points && (
+            <ul className="list-disc list-outside ml-4 flex flex-col gap-y-1.5 text-sm text-zinc-300 marker:text-zinc-500">
+              {((project as { points?: string[] }).points as string[]).map((point: string) => (
+                <li key={point} className="pl-1 leading-relaxed">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="flex flex-wrap gap-1 text-xs text-zinc-400 ml-4">
             {project.technologies.map((tech, index) => (
               <span key={tech}>
                 {tech}

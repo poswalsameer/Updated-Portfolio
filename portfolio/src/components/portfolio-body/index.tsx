@@ -25,7 +25,7 @@ export default function PortfolioBody() {
     <BlurFade delay={blurFadeDelay * 8} className="w-full flex max-w-2xl py-6 border-b border-zinc-700">
       <TooltipProvider delayDuration={100}>
         <Tabs defaultValue={tab} onValueChange={setTab} className="flex flex-col gap-y-4 w-full">
-          <TabsList className="bg-transparent px-3 flex gap-x-1 sm:gap-x-3 justify-start">
+          <TabsList className="bg-transparent !bg-transparent shadow-none px-3 flex gap-x-1 sm:gap-x-3 justify-start">
             {tabsConfig.map((t) => {
               const Icon = t.icon
               return (
@@ -33,8 +33,8 @@ export default function PortfolioBody() {
                   <TooltipTrigger asChild>
                     <TabsTrigger
                       value={t.id}
-                      className={`flex items-center justify-center h-8 px-3 rounded-md transition-all ${tab === t.id
-                          ? "text-white bg-zinc-900 underline underline-offset-2"
+                      className={`flex items-center justify-center h-8 px-3 rounded-md transition-all bg-transparent !bg-transparent shadow-none data-[state=active]:bg-transparent data-[state=active]:shadow-none ${tab === t.id
+                          ? "text-white underline underline-offset-2"
                           : "text-zinc-400 hover:text-zinc-200"
                         }`}
                       style={{ WebkitTapHighlightColor: "transparent" }}
