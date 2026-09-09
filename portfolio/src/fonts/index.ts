@@ -1,26 +1,17 @@
-import { Manrope, JetBrains_Mono, Outfit, DM_Sans } from "next/font/google"
-import { GeistMono } from 'geist/font/mono'
-import { GeistSans } from 'geist/font/sans'
+import { Schibsted_Grotesk } from "next/font/google"
 
-export const manrope = Manrope({
+export const schibstedGrotesk = Schibsted_Grotesk({
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 })
 
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-})
+// Aliases for backwards compatibility - all point to Schibsted Grotesk
+export const manrope = schibstedGrotesk
+export const jetbrainsMono = schibstedGrotesk
+export const outfit = schibstedGrotesk
+export const dmSans = schibstedGrotesk
 
-export const outfit = Outfit({
-  subsets: ["latin"],
-  display: "swap",
-})
-
-export const dmSans = DM_Sans({
-  subsets: ["latin"],
-  display: "swap",
-})
-
-export const geistMono = GeistMono
-export const geistSans = GeistSans
+// Re-export as geist for compatibility if imported elsewhere
+export const geistMono = schibstedGrotesk
+export const geistSans = schibstedGrotesk
