@@ -58,6 +58,17 @@ export const projects = [
     ],
   },
   {
+    title: 'Python Dock',
+    github: "https://github.com/poswalsameer/pydock",
+    link: "https://pydock.sameerposwal.in/",
+    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Jotai', 'Monaco Editor', 'Web Worker', 'Pyodide'],
+    points: [
+      'Browser based Python playground with an integrated Monaco editor, running Python entirely client-side through Pyodide on WebAssembly.',
+      'Engineered the execution pipeline inside a dedicated Web Worker, streaming stdout, stderr and Python tracebacks to the output console with timeout and output limit recovery.',
+      'Built the IDE workspace with resizable panels, custom themes, a stdin bridge for `input()` and persisted layout and editor preferences.',
+    ],
+  },
+  {
     title: 'Resumate',
     github: "https://github.com/poswalsameer/resumate",
     link: "https://resumate.sameerposwal.in/",
@@ -95,73 +106,107 @@ export const projects = [
 export const openSource = [
   {
     title: 'Keyshade',
-    description: 'Added delete account feature in user settings with confirmation dialog and input validation for safe account deletion.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/819",
+    contributions: [
+      {
+        description: 'Added delete account feature in user settings with confirmation dialog and input validation for safe account deletion.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/819",
+      },
+      {
+        description: 'Implemented edit API key workflow in user settings with sheet UI for updating name, expiry, permissions and validation.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/815",
+      },
+      {
+        description: 'Built members table for the Members tab with member listing and supporting UI for workspace member management.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/846",
+      },
+      {
+        description: 'Created API key management with creation, deletion and grid listing of all available API keys.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/726",
+      },
+      {
+        description: 'Refactored secret table to new design and migrated edit variable dialog to a sheet for improved editing experience.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/690",
+      },
+      {
+        description: 'Added ability to create new variables in a project, enabling dynamic variable management within workspaces.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/593",
+      },
+      {
+        description: 'Implemented variable deletion flow for projects, allowing removal of unwanted variables with proper confirmation.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/600",
+      },
+      {
+        description: 'Added edit secret functionality for projects, supporting in-place secret updates with validation.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/684",
+      },
+      {
+        description: 'Added logic for joining the waitlist one time with one email only.',
+        link: "https://github.com/keyshade-xyz/keyshade/pull/492",
+      },
+    ],
   },
   {
-    title: 'Keyshade',
-    description: 'Implemented edit API key workflow in user settings with sheet UI for updating name, expiry, permissions and validation.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/815",
+    title: 'Supercli',
+    contributions: [
+      {
+        description: 'Refactored the marketing landing page for consistent typography and design system, fixing mobile content clipping, overflow and touch target sizes across sections.',
+        link: "https://github.com/yashdev9274/supercli/pull/301",
+      },
+    ],
   },
   {
-    title: 'Keyshade',
-    description: 'Built members table for the Members tab with member listing and supporting UI for workspace member management.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/846",
-  },
-  {
-    title: 'Keyshade',
-    description: 'Created API key management with creation, deletion and grid listing of all available API keys.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/726",
-  },
-  {
-    title: 'Keyshade',
-    description: 'Refactored secret table to new design and migrated edit variable dialog to a sheet for improved editing experience.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/690",
-  },
-  {
-    title: 'Keyshade',
-    description: 'Added ability to create new variables in a project, enabling dynamic variable management within workspaces.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/593",
-  },
-  {
-    title: 'Keyshade',
-    description: 'Implemented variable deletion flow for projects, allowing removal of unwanted variables with proper confirmation.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/600",
-  },
-  {
-    title: 'Keyshade',
-    description: 'Added edit secret functionality for projects, supporting in-place secret updates with validation.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/684",
-  },
-  {
-    title: 'Keyshade',
-    description: 'Added logic for joining the waitlist one time with one email only.',
-    link: "https://github.com/keyshade-xyz/keyshade/pull/492",
+    title: 'px0',
+    contributions: [
+      {
+        description: 'Added a workbench setting to move the file explorer sidebar to either side of the editor, with a header menu and command palette entry.',
+        link: "https://github.com/px0-ai/px0/pull/112",
+      },
+    ],
   },
   {
     title: 'Shelf',
-    description: 'Removed the extra $ sign appearing on the popup in workspaces tab.',
-    link: "https://github.com/Shelf-nu/shelf.nu/pull/1348",
+    contributions: [
+      {
+        description: 'Removed the extra $ sign appearing on the popup in workspaces tab.',
+        link: "https://github.com/Shelf-nu/shelf.nu/pull/1348",
+      },
+    ],
   },
   {
     title: 'Codemod',
-    description: 'Fixed inconsistent text color in the Clerk UI component.',
-    link: "https://github.com/codemod-com/codemod/pull/1352",
+    contributions: [
+      {
+        description: 'Fixed inconsistent text color in the Clerk UI component.',
+        link: "https://github.com/codemod-com/codemod/pull/1352",
+      },
+    ],
   },
   {
     title: 'Tabler',
-    description: 'Repaired the wrong border styling used in the ribbon start class.',
-    link: "https://github.com/tabler/tabler/pull/1936",
+    contributions: [
+      {
+        description: 'Repaired the wrong border styling used in the ribbon start class.',
+        link: "https://github.com/tabler/tabler/pull/1936",
+      },
+    ],
   },
   {
     title: '100xDevs',
-    description: 'Conditionally rendered the `p` tag to show `per annum` text only when minSalary && maxSalary is valid.',
-    link: "https://github.com/code100x/job-board/pull/377",
+    contributions: [
+      {
+        description: 'Conditionally rendered the `p` tag to show `per annum` text only when minSalary && maxSalary is valid.',
+        link: "https://github.com/code100x/job-board/pull/377",
+      },
+    ],
   },
   {
     title: 'BM Samay',
-    description: 'Revamped the privacy policy page to simplify the user experience.',
-    link: "https://github.com/Bot-Rakshit/bm_frontend/pull/145",
+    contributions: [
+      {
+        description: 'Revamped the privacy policy page to simplify the user experience.',
+        link: "https://github.com/Bot-Rakshit/bm_frontend/pull/145",
+      },
+    ],
   },
 ]
 
