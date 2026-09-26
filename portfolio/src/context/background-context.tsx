@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react"
 
-export type BackgroundId = "default" | "olive" | "black" | "white"
+export type BackgroundId = "default" | "olive" | "black" | "warm" | "white"
 
 export type BackgroundOption = {
   id: BackgroundId
@@ -15,6 +15,7 @@ export const BACKGROUND_OPTIONS: BackgroundOption[] = [
   { id: "default", name: "Default", value: "#18181b" },
   { id: "olive", name: "Olive Dark", value: "#1D1D16" },
   { id: "black", name: "Black", value: "#000000" },
+  { id: "warm", name: "Warm Dark", value: "#131010" },
   { id: "white", name: "White", value: "#FFFFFF", light: true },
 ]
 
